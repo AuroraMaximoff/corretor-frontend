@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Corretor Pro | Gestão Imobiliária</title>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #f3f6fb;
+            --dark: #111827;
+            --dark-soft: #18253f;
+            --primary: #3056d3;
+            --muted: #6b7280;
+            --border: #dfe6f0;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--dark);
+        }
+
+        .topbar {
+            background: #111827;
+            padding: 14px 0;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
+        }
+
+        .brand {
+            color: white;
+            text-decoration: none;
+            font-weight: 900;
+            letter-spacing: -.4px;
+        }
+
+        .page-shell {
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            border-radius: 14px;
+            font-weight: 800;
+            padding: 10px 16px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #18253f, #304c89);
+            color: white;
+            border-radius: 34px;
+            padding: 54px;
+            box-shadow: 0 22px 48px rgba(31, 41, 55, .20);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            right: -80px;
+            top: -80px;
+            width: 260px;
+            height: 260px;
+            background: rgba(255, 255, 255, .08);
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 58px);
+            font-weight: 950;
+            letter-spacing: -1.5px;
+            line-height: 1.02;
+        }
+
+        .hero p {
+            color: #dbeafe;
+            font-size: 18px;
+            max-width: 620px;
+        }
+
+        .hero-card {
+            background: rgba(255, 255, 255, .12);
+            border: 1px solid rgba(255, 255, 255, .18);
+            border-radius: 26px;
+            padding: 24px;
+            backdrop-filter: blur(8px);
+        }
+
+        .hero-card strong {
+            font-size: 34px;
+            font-weight: 950;
+        }
+
+        .feature-card,
+        .step-card,
+        .highlight-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 26px;
+            padding: 26px;
+            box-shadow: 0 12px 28px rgba(15, 23, 42, .06);
+            height: 100%;
+            transition: .2s ease;
+        }
+
+        .feature-card:hover,
+        .step-card:hover,
+        .highlight-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 38px rgba(15, 23, 42, .10);
+        }
+
+        .icon-box {
+            width: 54px;
+            height: 54px;
+            border-radius: 18px;
+            background: #eef2ff;
+            color: var(--primary);
+            display: grid;
+            place-items: center;
+            font-size: 26px;
+            margin-bottom: 18px;
+        }
+
+        .section-title {
+            font-weight: 950;
+            letter-spacing: -.8px;
+        }
+
+        .section-subtitle {
+            color: var(--muted);
+            max-width: 680px;
+        }
+
+        .property-preview {
+            border-radius: 28px;
+            overflow: hidden;
+            background: white;
+            border: 1px solid var(--border);
+            box-shadow: 0 18px 38px rgba(15, 23, 42, .08);
+        }
+
+        .property-img {
+            height: 210px;
+            background:
+                linear-gradient(rgba(17, 24, 39, .15), rgba(17, 24, 39, .15)),
+                url("https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .status-pill {
+            display: inline-block;
+            border-radius: 999px;
+            padding: 8px 14px;
+            background: #dcfce7;
+            color: #166534;
+            font-weight: 900;
+            font-size: 13px;
+        }
+
+        .cta {
+            background: #111827;
+            color: white;
+            border-radius: 32px;
+            padding: 42px;
+            box-shadow: 0 18px 42px rgba(17, 24, 39, .18);
+        }
+
+        .cta p {
+            color: #d1d5db;
+        }
+
+        footer {
+            color: var(--muted);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="topbar">
+        <div class="container page-shell d-flex justify-content-between align-items-center">
+            <a href="index.html" class="brand">
+                🏢 Corretor Pro
+            </a>
+
+            <div class="d-flex gap-2">
+                <a href="login.html" class="btn btn-outline-light">
+                    Entrar
+                </a>
+
+                <a href="cadastro.html" class="btn btn-primary">
+                    Criar conta
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container page-shell py-5">
+
+        <section class="hero mb-5">
+            <div class="row g-4 align-items-center position-relative">
+                <div class="col-lg-7">
+                    <h1>
+                        Gestão imobiliária simples, organizada e profissional.
+                    </h1>
+
+                    <p class="mt-4 mb-4">
+                        O Corretor Pro ajuda você a controlar sua carteira de imóveis, acompanhar propostas,
+                        registrar localizações e gerar relatórios com poucos cliques.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="cadastro.html" class="btn btn-light">
+                            Começar agora
+                        </a>
+
+                        <a href="login.html" class="btn btn-outline-light">
+                            Já tenho acesso
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="hero-card">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <small>Imóveis</small><br>
+                                <strong>100%</strong>
+                                <p class="mb-0 small text-light">
+                                    organizados por status
+                                </p>
+                            </div>
+
+                            <div class="col-6">
+                                <small>Propostas</small><br>
+                                <strong>Fácil</strong>
+                                <p class="mb-0 small text-light">
+                                    controle de negociações
+                                </p>
+                            </div>
+
+                            <div class="col-12">
+                                <hr class="border-light opacity-25">
+                                <p class="mb-0">
+                                    Uma central para cadastrar, acompanhar e apresentar imóveis com mais
+                                    profissionalismo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <div class="mb-4">
+                <h2 class="section-title">
+                    Tudo que o corretor precisa em uma única tela
+                </h2>
+
+                <p class="section-subtitle">
+                    Organize sua rotina, reduza anotações soltas e mantenha as informações importantes sempre
+                    acessíveis.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <i class="bi bi-houses"></i>
+                        </div>
+                        <h5 class="fw-bold">Carteira de imóveis</h5>
+                        <p class="text-muted mb-0">
+                            Cadastre imóveis com imagem, preço, status, endereço e localização.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <i class="bi bi-cash-coin"></i>
+                        </div>
+                        <h5 class="fw-bold">Propostas</h5>
+                        <p class="text-muted mb-0">
+                            Registre interessados, valores ofertados e acompanhe cada negociação.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+                        <h5 class="fw-bold">Localização</h5>
+                        <p class="text-muted mb-0">
+                            Salve bairro, cidade, CEP e link de mapa para facilitar visitas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <i class="bi bi-file-earmark-pdf"></i>
+                        </div>
+                        <h5 class="fw-bold">Relatórios</h5>
+                        <p class="text-muted mb-0">
+                            Gere documentos organizados para impressão, análise e apresentação.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="section-title">
+                        Apresente seus imóveis com mais confiança.
+                    </h2>
+
+                    <p class="section-subtitle">
+                        Cada imóvel pode ter imagem, preço, localização, status e dados completos para consulta rápida.
+                        Ideal para atendimento, acompanhamento e apresentação ao cliente.
+                    </p>
+
+                    <div class="row g-3 mt-3">
+                        <div class="col-md-6">
+                            <div class="highlight-card">
+                                <h5 class="fw-bold">Status claro</h5>
+                                <p class="text-muted mb-0">
+                                    Disponível, reservado, vendido ou alugado.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="highlight-card">
+                                <h5 class="fw-bold">Mapa integrado</h5>
+                                <p class="text-muted mb-0">
+                                    Acesso rápido à localização do imóvel.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="property-preview">
+                        <div class="property-img"></div>
+
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h4 class="fw-bold mb-1">Casa Alto Padrão</h4>
+                                    <p class="text-muted mb-0">
+                                        Setor Bueno • Goiânia - GO
+                                    </p>
+                                </div>
+
+                                <span class="status-pill">
+                                    Disponível
+                                </span>
+                            </div>
+
+                            <h3 class="fw-bold mb-3">
+                                R$ 850.000,00
+                            </h3>
+
+                            <div class="d-flex gap-2 flex-wrap">
+                                <button class="btn btn-primary" disabled>
+                                    Ver detalhes
+                                </button>
+
+                                <button class="btn btn-outline-primary" disabled>
+                                    Abrir mapa
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <div class="mb-4">
+                <h2 class="section-title">
+                    Como funciona
+                </h2>
+
+                <p class="section-subtitle">
+                    Um fluxo simples para transformar informações soltas em uma carteira organizada.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="step-card">
+                        <div class="icon-box">
+                            1
+                        </div>
+                        <h5 class="fw-bold">Cadastre seus imóveis</h5>
+                        <p class="text-muted mb-0">
+                            Informe dados, preço, imagem, endereço, status e localização.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="step-card">
+                        <div class="icon-box">
+                            2
+                        </div>
+                        <h5 class="fw-bold">Registre propostas</h5>
+                        <p class="text-muted mb-0">
+                            Controle interessados, valores propostos e andamento da negociação.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="step-card">
+                        <div class="icon-box">
+                            3
+                        </div>
+                        <h5 class="fw-bold">Gere relatórios</h5>
+                        <p class="text-muted mb-0">
+                            Emita relatórios organizados para acompanhar seus imóveis e propostas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta mb-4">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-2">
+                        Pronto para organizar sua carteira?
+                    </h2>
+
+                    <p class="mb-0">
+                        Comece criando sua conta e gerencie seus imóveis em um ambiente simples, seguro e profissional.
+                    </p>
+                </div>
+
+                <div class="col-lg-4 text-lg-end">
+                    <a href="cadastro.html" class="btn btn-light">
+                        Criar conta
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-4">
+        <small>
+            © 2026 Corretor Pro • Desenvolvido por Maycon Cordeiro
+        </small>
+    </footer>
+
+</body>
+
+</html>
